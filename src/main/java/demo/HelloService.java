@@ -21,15 +21,18 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HelloService implements CommandLineRunner{
+public class HelloService implements CommandLineRunner {
 
-	private final HelloProperties properties;
+    private final HelloProperties properties;
 
-	@Autowired
-	public HelloService(HelloProperties properties) {this.properties = properties;}
+    @Autowired
+    public HelloService(HelloProperties properties) {
+        this.properties = properties;
+    }
 
-	@Override
-	public void run(String... strings) throws Exception {
-		System.out.println("=====" + properties.getPrefix() + " " + properties.getTarget());
-	}
+    @Override
+    public void run(String... strings) throws Exception {
+
+        System.out.println("=====" + properties.getPrefix() + " " + properties.getTarget());
+    }
 }
